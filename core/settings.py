@@ -35,11 +35,17 @@ INSTALLED_APPS = [
     'bares',
     'comidas',
     'bebidas',
-
+    'pagseguro',
     'rest_framework',
     'django_filters',
     'rest_framework_simplejwt',
 ]
+
+PAGSEGURO_EMAIL = 'fulano@cicrano.com'
+PAGSEGURO_TOKEN = 'token'
+PAGSEGURO_SANDBOX = True # se o valor for True, as requisições a api serão feitas usando o PagSeguro Sandbox.
+PAGSEGURO_LOG_IN_MODEL = True # se o valor for True, os checkouts e transações vão ser logadas no database.
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
